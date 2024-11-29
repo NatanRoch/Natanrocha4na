@@ -1,14 +1,13 @@
-import { Pool } from "pg";
 
-// Substitua pela sua string de conexão do Render.com
-const connectionString =
-  "postgresql://backend_ugaz_user:87KlrSzD5GQ0M8KBs5SaJ0bJgGj5112g@dpg-cs2rppbv2p9s738nq950-a.oregon-postgres.render.com/backend_ugaz";
+// src/config/database.ts
+import { Pool } from 'pg';
 
 const pool = new Pool({
-  connectionString,
-  ssl: {
-    rejectUnauthorized: false, // Permite conexões SSL não autorizadas
-  },
+  host: 'aws-0-us-west-1.pooler.supabase.com', // ex: your-project.supabase.co
+  user: 'postgres.yuifmpwitqkgtxkyeuvc',
+  password: '960550076Wag$',
+  database: 'postgres',
+  port: 6543, // geralmente é 5432 para PostgreSQL
 });
 
 export default pool;
